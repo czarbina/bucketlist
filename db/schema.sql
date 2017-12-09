@@ -1,13 +1,13 @@
 -- Create Bamazon Database --
-DROP DATABASE IF EXISTS burgers_db;
-CREATE DATABASE burgers_db;
+DROP DATABASE IF EXISTS bucketlistDB;
+CREATE DATABASE bucketlistDB;
 
-USE burgers_db;
+USE bucketlistDB;
 
-CREATE TABLE burgers(
+CREATE TABLE list(
   id INT NOT NULL AUTO_INCREMENT,
-  burgers_name VARCHAR(100) NOT NULL,
-  devoured BOOLEAN DEFAULT false,
+  thingToDo VARCHAR(100) NOT NULL,
+  thingDone BOOLEAN DEFAULT false,
   date TIMESTAMP,
   PRIMARY KEY (id)
 );

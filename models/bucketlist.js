@@ -1,17 +1,27 @@
-var orm = require("./config/orm.js");
+var orm = require("../config/orm.js");
 
-var models = {
+var thing = {
 
-// Find all the burgers ordering by id.
-orm.selectAll("*", burgers", "id");
+  selectAll: function(cb) {
+    orm.all("list", function(res) {
+      cb(res);
+    });
+  }
+  // ,
+  // insertOne: function(table, tableCol, valOfCol) {
+  //   var queryString = "INSERT INTO ?? (??) VALUES (?)";
+  //   console.log(queryString);
+  //   connection.query(queryString, [table, tableCol, valOfCol], function(err, result) {
+  //     console.log(result);
+  //   });
+  // },
+  // updateOne: function(table, tableCol1, valOfCol1, tableCol2, valOfCol2) {
+  //   var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
 
-// Add a new burger to the bucketlist of burgers
-// TODO: FIGURE OUT HOW TO GENERALIZE BURGER VALUE 
-orm.insertOne("burgers", "burgers_name", "Yummy burger");
+  //   connection.query(queryString, [table, tableCol1, valOfCol1, tableCol2, valOfCol2], function(err, result) {
+  //     console.log(result);
+  //   });
+  // }
+};
 
-// This will probably update the devoured status to true
-// TODO: FIGURE OUT HOW TO GENERALIZE ID VALUE 
-orm.updateOne("burgers", "devoured", "true", "id","3");
-}
-
-module.exports = models;
+module.exports = thing;

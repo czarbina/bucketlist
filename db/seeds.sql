@@ -1,8 +1,8 @@
-INSERT INTO burgers (burgers_name, devoured)
-VALUES ("Juicy Burger", false),
-("Meaty Burger", false),
-("Cheesey Burger", false),
-("Spicy Burger", false),
-("Turkey Burger", false);
+INSERT INTO list (thingToDo, thingDone)
+VALUES ("Swim with manta ray", false),
+("Sky dive", false),
+("Ride a bike", false),
+("Go to Paris", false),
+("Understand MVC", false);
 
-SELECT * FROM burgers ORDER BY id;
+SELECT * FROM list ORDER BY id;
