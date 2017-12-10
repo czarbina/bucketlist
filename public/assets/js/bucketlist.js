@@ -1,20 +1,20 @@
 $(function() {
 
-$(".change-accomplished").on("click", function(event) {
+$(".change-status").on("click", function(event) {
     var id = $(this).data("id");
-    var newAccom = $(this).data("data-newaccomplished");
+    var newStatus = $(this).data("data-newstatus");
 
-    var newAccomState = {
-      accomplished: newAccom
+    var newStatusState = {
+      accomplished: newStatus
     };
 
     // Send the PUT request.
     $.ajax("/api/bucketlist/" + id, {
       type: "PUT",
-      data: newAccomState
+      data: newStatusState
     }).then(
       function() {
-        console.log("changed accomplished to", newAccom);
+        console.log("changed status to", newStatus);
         // Reload the page to get the updated list
         location.reload();
       }

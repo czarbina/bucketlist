@@ -32,6 +32,7 @@ function objToSql(ob) {
   // translate array of strings to a single comma-separated string
   return arr.toString();
 }
+
 function printQuestionMarks(num) {
   var arr = [];
 
@@ -98,6 +99,11 @@ var orm = {
 	},
 	
   // An example of objColVals would be {name: panther, sleepy: true}
+  // This will communicate with the db. table is the mysql table 
+  // we're grabbing, objColVals is the key value pairs we're going to 
+  // update, and the condition is where we'd make those updates. Then 
+  // we will take our query results and pass it back to the orm to give
+  // to the controller
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -111,7 +117,7 @@ var orm = {
       if (err) {
         throw err;
       }
-
+// 
       cb(result);
     });
   },

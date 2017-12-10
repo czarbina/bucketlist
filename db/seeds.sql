@@ -8,3 +8,5 @@ VALUES ("Swim with manta ray", false),
 ("Understand MVC", false);
 
 SELECT * FROM bucketlist ORDER BY id;
+
+UPDATE bucketlist SET accomplished=true WHERE id=1;

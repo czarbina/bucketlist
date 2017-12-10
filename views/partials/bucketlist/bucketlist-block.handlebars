@@ -1,8 +1,8 @@
 <li class="list-group-item">
 	{{item}}
 
-	<button class="change-accomplished" data-id="{{id}}" data-newaccomplished="{{accomplish}}">
-		{{#if accomplish}}<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{else}}<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{/if}}
+	<button class="change-status" data-id="{{id}}" data-newstatus="{{todo}}">
+		{{#if todo}}<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{else}}<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{/if}}
 	</button>
 
 	<button class="delete-item" data-id="{{this.id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>

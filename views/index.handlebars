@@ -13,7 +13,7 @@
 			<h2>TODO</h2>
 			{{#each bucketlist}}
 				{{#unless accomplished}}
-					{{> bucketlist/bucketlist-block accomplish=true}}
+					{{> bucketlist/bucketlist-block todo=true}}
 				{{/unless}}	
 			{{/each}}
 		</ul>
@@ -26,8 +26,7 @@
 
 			{{#each bucketlist}}
 				{{#if accomplished}}
-					{{> bucketlist/bucketlist-block accomplish=false}} 
-					
+					{{> bucketlist/bucketlist-block todo=false}} 
 				{{/if}}	
 			{{/each}}
 		</ul>
