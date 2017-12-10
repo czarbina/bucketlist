@@ -1,0 +1,9 @@
+<li class="list-group-item">
+	{{item}}
+
+	<button class="change-accomplished" data-id="{{id}}" data-newaccomplished="{{accomplish}}">
+		{{#if accomplish}}Check!{{else}}It was a dream!{{/if}}
+	</button>
+
+	<button class="delete-item" data-id="{{this.id}}">DELETE!</button>
+</li>

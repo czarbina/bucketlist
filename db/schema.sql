@@ -1,14 +1,13 @@
--- Create Bamazon Database --
+-- Create bucketlist db --
 DROP DATABASE IF EXISTS bucketlistDB;
 CREATE DATABASE bucketlistDB;
 
 USE bucketlistDB;
 
-CREATE TABLE list(
+CREATE TABLE bucketlist(
   id INT NOT NULL AUTO_INCREMENT,
-  thingToDo VARCHAR(100) NOT NULL,
-  thingDone BOOLEAN DEFAULT false,
+  item VARCHAR(100) NOT NULL,
+  accomplished BOOLEAN DEFAULT false,
   date TIMESTAMP,
   PRIMARY KEY (id)
 );
-

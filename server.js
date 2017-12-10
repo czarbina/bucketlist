@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 
 var app = express();
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 
 // Tells express to use public folder for all
 // static files
@@ -22,7 +22,7 @@ app.set("view engine", "handlebars");
 var mysql = require("mysql");
 
 // Imports routes and gives our server access to them
-var routes = require("./controllers/bucketlist_controller.js");
+var routes = require("./controllers/controller.js");
 
 // Tells express to utilize burgers_controllers.js
 // When on home page?

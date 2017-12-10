@@ -1,8 +1,10 @@
-INSERT INTO list (thingToDo, thingDone)
+INSERT INTO bucketlist (item, accomplished)
 VALUES ("Swim with manta ray", false),
 ("Sky dive", false),
 ("Ride a bike", false),
+("Graduate college", true),
 ("Go to Paris", false),
+("See snow before 30", true),
 ("Understand MVC", false);
 
-SELECT * FROM list ORDER BY id;
+SELECT * FROM bucketlist ORDER BY id;
