@@ -2,8 +2,8 @@
 	{{item}}
 
 	<button class="change-accomplished" data-id="{{id}}" data-newaccomplished="{{accomplish}}">
-		{{#if accomplish}}Check!{{else}}It was a dream!{{/if}}
+		{{#if accomplish}}<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{else}}<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{/if}}
 	</button>
 
-	<button class="delete-item" data-id="{{this.id}}">DELETE!</button>
+	<button class="delete-item" data-id="{{this.id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
 </li>
