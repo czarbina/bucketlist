@@ -9,4 +9,4 @@ VALUES ("Swim with manta ray", false),
 
 SELECT * FROM bucketlist ORDER BY id;
 
-UPDATE bucketlist SET accomplished=true WHERE id=1;
+UPDATE bucketlist SET accomplished=1 WHERE id=1;

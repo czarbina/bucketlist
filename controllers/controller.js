@@ -18,9 +18,9 @@ router.get("/", function(req, res) {
 
 router.post("/api/bucketlist", function(req, res) {
   bucketlist.create([
-    "item", "accomplished"
+    "item"
   ], [
-    req.body.item, req.body.accomplished
+    req.body.item
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
@@ -30,13 +30,12 @@ router.post("/api/bucketlist", function(req, res) {
 router.put("/api/bucketlist/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  console.log("condition", condition);
+  console.log(condition);
 
   bucketlist.update({
     accomplished: req.body.accomplished
   }, condition, function(result) {
     if (result.changedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
       res.status(200).end();

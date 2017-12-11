@@ -1,17 +1,18 @@
 $(function() {
 
-$(".change-status").on("click", function(event) {
+$(".change-status").on("click", 
+  function(event) {
     var id = $(this).data("id");
     console.log(id);
 
-    var newStatus = $(this).data("data-newstatus");
+    var newStatus = $(this).data("newstatus");
     console.log(newStatus);
 
     var newStatusState = {
       accomplished: newStatus
     };
 
-    console.log(newStatusState);
+    // console.log(newStatusState);
 
     // Send the PUT request.
     $.ajax("/api/bucketlist/" + id, {
